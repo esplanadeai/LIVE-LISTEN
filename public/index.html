@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Call Assistant</title>
+</head>
+<body>
+  <h1>AI Call Assistant</h1>
+  <form id="callForm">
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" required>
+    <label for="customerName">Customer Name:</label>
+    <input type="text" id="customerName">
+    <button type="submit">Initiate Call</button>
+  </form>
+
+  <div id="callControls" style="display:none;">
+    <h2>Call Controls</h2>
+    <p>Listen URL: <span id="listenUrl"></span></p>
+    <label for="controlType">Message Type:</label>
+    <select id="controlType">
+      <option value="say">Say</option>
+      <option value="play">Play</option>
+      <option value="hangup">Hang Up</option>
+    </select>
+    <label for="controlMessage">Message:</label>
+    <input type="text" id="controlMessage" placeholder="Enter your message">
+    <button id="sendControl">Send Control</button>
+  </div>
+
+  <div id="liveListening" style="display:none;">
+    <h2>Live Listening</h2>
+    <button id="startListening">Start Listening</button>
+    <button id="stopListening" disabled>Stop Listening</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
