@@ -20,7 +20,7 @@ This project is for **educational and internal use only**. Monitoring or recordi
 Follow these steps to set up and run the project:  
 
 ### 1. Clone the Repository  
-`git clone https://github.com/your-repo-url.git`
+`git clone https://github.com/<this-repo-url.git>`
 
 ### 2. Navigate to the Project Directory  
 `cd your-project-folder`
