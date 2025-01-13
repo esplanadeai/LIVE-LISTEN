@@ -1,4 +1,4 @@
-const serverUrl = "http://localhost:8000"; // Base URL of your backend server
+const serverUrl = "http://localhost:9000"; // Base URL of your backend server
 const sampleRate = 16000; // Hz
 let audioContext = null;
 let ws = null;
@@ -10,6 +10,7 @@ async function startAudio(listenUrl) {
     }
 
     try {
+        
         // Step 1: Create an AudioContext with the server's sample rate
         audioContext = new AudioContext({ sampleRate });
         console.log("AudioContext created with sample rate:", sampleRate);

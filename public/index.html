@@ -4,17 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Call Assistant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    #callForm, #callControls, #liveListening {
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    label, input, select, button {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 300px;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <h1>AI Call Assistant</h1>
-  <form id="callForm">
-    <label for="phoneNumber">Phone Number:</label>
-    <input type="text" id="phoneNumber" required>
-    <label for="customerName">Customer Name:</label>
-    <input type="text" id="customerName">
-    <button type="submit">Initiate Call</button>
-  </form>
-
+  <div id="callForm">
+    <h1>AI Call Assistant</h1>
+    <form>
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" required>
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName">
+      <button type="submit">Initiate Call</button>
+    </form>
+  </div>
   <div id="callControls" style="display:none;">
     <h2>Call Controls</h2>
     <p>Listen URL: <span id="listenUrl"></span></p>
@@ -28,13 +72,11 @@
     <input type="text" id="controlMessage" placeholder="Enter your message">
     <button id="sendControl">Send Control</button>
   </div>
-
   <div id="liveListening" style="display:none;">
     <h2>Live Listening</h2>
     <button id="startListening">Start Listening</button>
-    <button id="stopListening" disabled>Stop Listening</button>
+    <button id="stopListening" >Stop Listening</button>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

@@ -43,7 +43,7 @@ async function initiateCall(phoneNumber, customerName) {
         name: customerName || "Unknown",
       },
       assistant: {
-        name: "TALK AI OUTBOUND",
+        name: "AI ASSSISTANT",
         voice: {
           provider: "11labs",
           voiceId: "p43fx6U8afP2xoq1Ai9f",
