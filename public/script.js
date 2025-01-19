@@ -1,4 +1,4 @@
-const serverUrl = "http://localhost:9000"; // Base URL of your backend server
+const serverUrl = "http://localhost:8080"; // Base URL of your backend server
 const sampleRate = 16000; // Hz
 let audioContext = null;
 let ws = null;
